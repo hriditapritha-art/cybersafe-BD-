@@ -1,6 +1,8 @@
+// এই কোডটি আপনার script.js ফাইলের একদম উপরে যুক্ত করুন
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 
+// আপনার নিজস্ব Firebase কনফিগারেশন
 const firebaseConfig = {
     apiKey: "AIzaSyByqTyOvO8JkS1C8EQUz6R16xHTBNSIQ",
     authDomain: "cybersafe-bd-6a72b.firebaseapp.com",
@@ -8,9 +10,9 @@ const firebaseConfig = {
     storageBucket: "cybersafe-bd-6a72b.appspot.com",
     messagingSenderId: "1026958212236",
     appId: "1:1026958212236:web:6ad47a8ba4f99c9ce48fa9"
+};
 
-
-
+// Firebase অ্যাপ ইনিশিয়ালাইজ করা
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
@@ -229,6 +231,7 @@ if (window.location.pathname.includes('result.html')) {
         getDoc(docRef).then((docSnap) => {
             if (docSnap.exists()) {
                 const data = docSnap.data();
+                // এখানে নামের ভুল সংশোধন করা হয়েছে
                 const beforeScore = data.before_score || 0;
                 const afterScore = data.after_score || 0;
 
@@ -268,4 +271,3 @@ if (window.location.pathname.includes('result.html')) {
         window.location.href = 'index.html';
     }
 }
-
