@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>কুইজ - ২ | After Quiz</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBzyqTyQvO8JkS1C8EQUZ6sRi6XhTBNSIQ",
+            authDomain: "cybersafe-bd-6a72b.firebaseapp.com",
+            projectId: "cybersafe-bd-6a72b",
+            storageBucket: "cybersafe-bd-6a72b.firebasestorage.app",
+  messagingSenderId: "1026958212236",
+            messagingSenderId: "G-M32N4VHB95",
+            appId: "1:1026958212236:web:6ad47a8ba4f99c9ce48fa9"
+        
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+    </script>
 </head>
 <body>
     <div class="quiz-container">
